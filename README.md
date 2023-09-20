@@ -10,4 +10,4 @@ First project for CSE 341 - Web Services.
 
 ## Setup
 - `npm install`
-- `npm run start` starts up a local server
+- `npm start` starts up a local server

@@ -1,5 +1,5 @@
 # CSE 341 - Project 1: Contacts
- -  (Live)
+ - https://project1-co8k.onrender.com/contacts (Live)
  - https://github.com/BelChaparro/cse341-project1.git (GitHub Repository)
 
 ## Description

@@ -1,0 +1,18 @@
+// LOCALHOST
+GET http://localhost:3000/contacts
+###
+GET http://localhost:3000/contacts/650b179b3aedb0e8c7c7f033
+###
+GET http://localhost:3000/contacts/650b17d83aedb0e8c7c7f035
+###
+GET http://localhost:3000/contacts/650b181f3aedb0e8c7c7f038
+###
+
+// PRODUCTION DEPLOY
+GET https://project1-co8k.onrender.com/contacts
+###
+GET https://project1-co8k.onrender.com/contacts/650b179b3aedb0e8c7c7f033
+###
+GET https://project1-co8k.onrender.com/contacts/650b17d83aedb0e8c7c7f035
+###
+GET https://project1-co8k.onrender.com/contacts/650b181f3aedb0e8c7c7f038

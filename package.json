@@ -10,11 +10,18 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "lint": "eslint .",
+  "lint:fix": "eslint --fix",
+  "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc",
   "devDependencies": {
-    "nodemon": "^3.0.1"
+    "eslint": "^8.50.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-prettier": "^5.0.0",
+    "nodemon": "^3.0.1",
+    "prettier": "3.0.3"
   },
   "engines": {
-    "node": ">=15 <18.17.1"
+    "node": ">=15 <=18.17.1"
   },
   "dependencies": {
     "body-parser": "^1.20.2",

@@ -4,7 +4,7 @@ const app = express();
 
 const port = process.env.PORT || 3000;
 
-// After / go to ./routes
+// When / go to ./routes/index.js
 app.use('/', require('./routes'));
 
 mongodb.initDb((err) => {

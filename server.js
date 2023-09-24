@@ -5,11 +5,11 @@ const app = express();
 
 const port = process.env.PORT || 3000;
 
-// When / go to ./routes/index.js
-app.use("/", require("./routes"));
-
 // Body-parser:
 app.use(bodyParser.json);
+
+// When / go to ./routes/index.js
+app.use("/", require("./routes"));
 
 mongodb.initDb((err) => {
   if (err) {

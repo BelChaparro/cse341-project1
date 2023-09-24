@@ -65,7 +65,7 @@ const updateContact = async (req, res) => {
 // deleteContact async function:
 const deleteContact = async (req, res) => {
     const contactId = new ObjectId(req.params.id);
-    const response = await mongodb.getDatabase().db().collection("contacts").remove({ _id: contactId }, contact);
+    const response = await mongodb.getDatabase().db().collection("contacts").deleteOne({ _id: contactId }, contact);
     
     if ( response.deleteCount > 0) {
         res.status(200).send();

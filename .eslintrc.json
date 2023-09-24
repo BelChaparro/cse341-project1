@@ -13,9 +13,6 @@
   "parserOptions": {
     "ecmaVersion": "latest"
   },
-  "lint": "eslint .",
-  "lint:fix": "eslint --fix",
-  "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc",
   "rules": {
     "no-console": "error"
   }

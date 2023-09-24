@@ -7,6 +7,13 @@ const port = process.env.PORT || 3000;
 
 // Body-parser:
 app.use(bodyParser.json);
+app.use((req, res, next) => {
+  res.setHeader("Access-Controll-Allow-Origin", "*");
+  res.setHeader("Access-Controll-Allow-Headers",
+    "Origin, X-Requested-With, COntent-Type, Accept, Z-Key");
+  res.setHeader("Access-Controll-Allow-Mehotds", "GET, POST, PUT, DELETE, OPTIONS");
+  next();
+});
 
 // When / go to ./routes/index.js
 app.use("/", require("./routes"));

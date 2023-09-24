@@ -5,14 +5,14 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server.js"
+    "start": "nodemon server.js",
+    "format": "prettier --write .",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "lint": "eslint .",
-  "lint:fix": "eslint --fix",
-  "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc",
   "devDependencies": {
     "eslint": "^8.50.0",
     "eslint-config-prettier": "^9.0.0",

@@ -36,7 +36,7 @@ const createContact = async (req, res) => {
   };
   const response = await mongodb.getDatabase().db().collection("contacts").insertOne({ contact });
 
-  if ( response.createCount > 0) {
+  if ( response.acknowdledged) {
     res.status(200).send();
   } else {
     res.status(500).json(response.error || "There has been an error while creating the contact.")
@@ -55,7 +55,7 @@ const updateContact = async (req, res) => {
       };
       const response = await mongodb.getDatabase().db().collection("contacts").replaceOne({ _id: contactId }, contact);
     
-      if ( response.acknowledge > 0) {
+      if ( response.modifiedCount > 0) {
         res.status(200).send();
       } else {
         res.status(500).json(response.error || "There has been an error while updating the contact.")
@@ -67,7 +67,7 @@ const deleteContact = async (req, res) => {
     const contactId = new ObjectId(req.params.id);
     const response = await mongodb.getDatabase().db().collection("contacts").deleteOne({ _id: contactId }, contact);
     
-    if ( response.deleteCount > 0) {
+    if ( response.deletedCount > 0) {
         res.status(200).send();
       } else {
         res.status(500).json(response.error || "There has been an error while deleting the contact.")
